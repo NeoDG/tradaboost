@@ -30,18 +30,18 @@ if __name__ == "__main__":
     weight = tfidf.toarray()  # 将tf-idf矩阵抽取出来，元素a[i][j]表示j词在i类文本中的tf-idf权重
     ran = np.arange(len(weight))
     np.random.shuffle(ran)
-    with codecs.open('labeled_10.tfidf', 'w', 'utf-8') as f:
+    with codecs.open('labeled_11.tfidf', 'w', 'utf-8') as f:
         # for i in range(len(vocal0)):
         #     if vocal0[i].strip() in word:
         #         vocal1[i] = weight[0][word.index(vocal0[i].strip())]
         #         f.write(str(i) + ' ' + str(vocal1[i]) + '\n')
-        for i in ran[:10]:
+        for i in ran[:n]:
             f.write(str(i + 1) + ' ' if i < n else str(-i - 1) + ' ')
             for j in range(len(weight[i])):
                 f.write(str(j + 1) + ':' + str(weight[i][j]) + ' ')
             f.write('\n')
-    with codecs.open('unlabeled_10.tfidf', 'w', 'utf-8') as f:
-        for i in ran[n:n + 10]:
+    with codecs.open('unlabeled_11.tfidf', 'w', 'utf-8') as f:
+        for i in ran[n:len(weight)]:
             f.write(str(i + 1) + ' ' if i < n else str(-i - 1) + ' ')
             for j in range(len(weight[i])):
                 f.write(str(j + 1) + ':' + str(weight[i][j]) + ' ')
