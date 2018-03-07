@@ -1,3 +1,5 @@
 *.tfidf
 *.txt
 .idea/*
+*.predict
+*.wmodel
