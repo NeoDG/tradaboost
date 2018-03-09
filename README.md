@@ -38,3 +38,12 @@ Result in the first iter:
     XiAlpha-estimate of the recall: recall=>97.13% (rho=1.00,depth=0)
     XiAlpha-estimate of the precision: precision=>94.64% (rho=1.00,depth=0)
     Number of kernel evaluations: 42986
+
+# 3.08
+Happy women's day
+
+See the XiAlpha-estimate, precision shakes around 95%.
+
+But in the outputfile, no result printed in vote_predict, obviously wrong outputs in results/results0/etc.txt, since the calc_auc executable file doesn't work for me, there is an error print in vote_auc.txt.
+
+I think the prediction part is ok but the code is not showing us the intuitive or I missed something.
